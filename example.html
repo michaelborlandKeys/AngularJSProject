@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<body>
+<div ng-app="myAngularTest" ng-controller="testForm">
+
+
+<form>
+<h1>{{changeHeading}}</h1>
+<label for="changeHeading">Change Form Title:<input type="text" name="changeHeading" ng-model="changeHeading"></label><br /> <br />
+<label for="ID_number">Type Your ID:<input type="text" name="ID_number" ng-model="ID_number"></label><br /><br />
+<label for="firstName">Type your First Name:<input type="text" name="firstName" ng-model="firstName"></label><br /><br />
+<label for="lastName">Type your Last Name:<input type="text" name="lastName" ng-model="lastName"></label><br /> <br />
+<label for="email"> Type Your Email:<input type="text" name="email" ng-model="email"></label><br /> <br /> 
+<label for="username">Type Your Username:<input type="text" name="username" ng-model="username"></label>  <br /> <br />
+<label for="pass">Type Your Password:<input type="password" name="pass" ng-model="pass"></label>
+<label for="hf"><input type="hidden" name="hf" ng-model="hf"></label>
+</form>
+<h1 style="text-decoration: underline;">Test Form Output Below For {{firstName}} {{lastName}}</h1>
+
+<p>Your ID is: {{ID_number}}</p>
+<p> Your First Name is: {{firstName}}</p>
+<p> Your Last Name is: {{lastName}}</p>
+<p>Your Email is: {{email}}</p>
+<p>Your Username is: {{username}}</p>
+<p>Your Password is: {{pass}}</p>
+<p>Hidden Field Test: {{hf}}</p>
+
+
+	
+</div>
+	<script>
+			var testFormApp = angular.module('myAngularTest', []);
+			testFormApp.controller('testForm',function($scope){
+				$scope.ID_number ="";
+				$scope.firstName=""; 
+				$scope.lastName=""; 
+				$scope.email=""; 
+				$scope.username=""; 
+				$scope.pass="";
+				$scope.hf="This is a test of the hidden field Binder.";
+				$scope.changeHeading="Test Form";
+
+
+
+
+				
+			}); 
+
+
+	</script>
+
+</body>
+</html>
