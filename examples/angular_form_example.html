@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angular Form Example</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+
 <body>
 <div ng-app="myAngularTest" ng-controller="testForm">
 
@@ -27,29 +32,22 @@
 <p>Your Password is: {{pass}}</p>
 <p>Hidden Field Test: {{hf}}</p>
 
-
-	
 </div>
-	<script>
-			var testFormApp = angular.module('myAngularTest', []);
-			testFormApp.controller('testForm',function($scope){
-				$scope.ID_number ="";
-				$scope.firstName=""; 
-				$scope.lastName=""; 
-				$scope.email=""; 
-				$scope.username=""; 
-				$scope.pass="";
-				$scope.hf="This is a test of the hidden field Binder.";
-				$scope.changeHeading="Test Form";
+<script>
+var testFormApp = angular.module('myAngularTest', []);
+testFormApp.controller('testForm',function($scope){
+$scope.ID_number ="";
+$scope.firstName=""; 
+$scope.lastName=""; 
+$scope.email=""; 
+$scope.username=""; 
+$scope.pass="";
+$scope.hf="This is a test of the hidden field Binder.";
+$scope.changeHeading="Test Form";
 
+}); 
+</script>
 
-
-
-				
-			}); 
-
-
-	</script>
 
 </body>
 </html>
